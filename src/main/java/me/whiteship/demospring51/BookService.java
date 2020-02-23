@@ -10,10 +10,9 @@ import java.util.List;
 public class BookService {
 
     @Autowired
-    List<BookRepository> bookRepositories;
+    BookRepository mybookRepository;
 
     public void printBookRepository() {
-//        this.bookRepositories.forEach(s -> System.out.println(s.getClass()));
-        this.bookRepositories.forEach(System.out::println);
+        System.out.println(mybookRepository.getClass());
     }
 }
